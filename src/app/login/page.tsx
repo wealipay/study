@@ -43,7 +43,8 @@ export default function LoginPage() {
       } else {
         setMessage('Check your email for the confirmation link!')
       }
-    } catch (error) {
+    } catch (err) {
+      console.error('Auth error:', err)
       setMessage('Failed to connect to Supabase. Please check your configuration.')
     }
     setLoading(false)
@@ -71,7 +72,8 @@ export default function LoginPage() {
       } else {
         router.push('/')
       }
-    } catch (error) {
+    } catch (err) {
+      console.error('Auth error:', err)
       setMessage('Failed to connect to Supabase. Please check your configuration.')
     }
     setLoading(false)

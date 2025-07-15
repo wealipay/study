@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import LogoutButton from '@/components/LogoutButton'
+import Link from 'next/link'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
@@ -143,12 +144,27 @@ SUPABASE_SERVICE_ROLE_KEY=your_secret`}</code>
             </div>
           </div>
           
-          <div className="mt-8 p-4 bg-blue-50 rounded-md">
-            <h3 className="text-lg font-medium text-blue-800 mb-2">Getting Started</h3>
-            <p className="text-blue-700">
-              This project is ready to use! Update your Supabase credentials in <code className="bg-blue-100 px-1 rounded">.env.local</code> 
-              and start building your application.
+          <div className="mt-8 p-4 bg-green-50 rounded-md">
+            <h3 className="text-lg font-medium text-green-800 mb-4">在线考试系统</h3>
+            <p className="text-green-700 mb-4">
+              欢迎使用在线考试系统！这是一个完整的考试解决方案，支持填空题、单选题和多选题，并能自动计算分数。
             </p>
+            <Link href="/exams">
+              <button className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors">
+                开始考试 →
+              </button>
+            </Link>
+          </div>
+          
+          <div className="mt-8 p-4 bg-blue-50 rounded-md">
+            <h3 className="text-lg font-medium text-blue-800 mb-2">功能特点</h3>
+            <ul className="text-blue-700 space-y-1">
+              <li>• 支持填空题、单选题、多选题</li>
+              <li>• 实时计时器，自动提交</li>
+              <li>• 考试结束后自动计算分数</li>
+              <li>• 详细的答题分析和结果展示</li>
+              <li>• 响应式设计，支持移动设备</li>
+            </ul>
           </div>
         </div>
       </div>
