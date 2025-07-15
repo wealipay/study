@@ -2,11 +2,16 @@
   "name": "nextjs15-supabase-tailwindcss-starter",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-deployment": "node check-deployment.js"
   },
   "dependencies": {
     "react": "19.1.0",
